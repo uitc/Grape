@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swing.dao.WordsDAO">
+    <resultMap id="BaseResultMap" type="com.swing.domain.WordsDO">
+        <result column="word" jdbcType="VARCHAR" property="word"/>
+        <result column="word_explain" jdbcType="VARCHAR" property="wordExplain"/>
+    </resultMap>
+    <sql id="table_name">
+		words
+	</sql>
+    <sql id="Base_Column_List">
+		words.word, words.word_explain
+	</sql>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.swing.domain.WordsDO"
+            useGeneratedKeys="true">
+        insert into
+        <include refid="table_name"/>
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="word != null">
+                word,
+            </if>
+            <if test="wordExplain != null">
+                word_explain,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="word != null">
+                #{word,jdbcType=VARCHAR},
+            </if>
+            <if test="wordExplain != null">
+                #{wordExplain,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="listByWord" parameterType="com.swing.domain.WordsDO" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        where
+        word like concat("%",#{word,jdbcType=VARCHAR},"%")
+    </select>
+
+    <select id="listByWordAll" parameterType="com.swing.domain.WordsDO" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        where
+        word = #{word,jdbcType=VARCHAR}
+    </select>
+
+    <select id="listByWordStart" parameterType="com.swing.domain.WordsDO" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        where
+        word like concat(#{word,jdbcType=VARCHAR},"%")
+    </select>
+
+    <select id="listByWordEnd" parameterType="com.swing.domain.WordsDO" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        where
+        word like concat("%",#{word,jdbcType=VARCHAR})
+    </select>
+
+    <select id="listByExplain" parameterType="com.swing.domain.WordsDO" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        where
+        word_explain like concat("%",#{wordExplain,jdbcType=VARCHAR},"%")
+    </select>
+
+
+</mapper>

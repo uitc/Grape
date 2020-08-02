@@ -1,0 +1,1 @@
+mvn clean package && java -jar target/dictionary-1.0.0-SNAPSHOT-jar-with-dependencies.jar
