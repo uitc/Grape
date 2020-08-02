@@ -1,37 +1,80 @@
 # Grape
 
-#### 介绍
+## 介绍
 葡萄翻译，一个java命令行的单词查询工具
 
-#### 软件架构
-软件架构说明
+## 安装教程
+本项目由于在终端运行，因此只能确保Win10环境的运行，不支持苹果（原因:》-《！没有MAC)
 
+部署环境：
+* JDK 1.8
+* Mysql 5.X
+* Maven 3.X
 
-#### 安装教程
+步骤
+1. 首先新建数据库名为dictionary，编码格式为utf-8,然后导入SQL脚本 sql/word.sql
+2. 进入项目根目录，直接运行脚本文件 start.bat (其实就是maven 打包和运行jar), 搞定 !
+3. 快速打开方式:
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+在 C:\system 下新建一个批处理文件 grape.bat，输入(注意填写你自己的jar路径)
+```shell
+java -jar D:\code\java\Grape\jar\dictionary-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+```
+保存退出，然后下次使用，只需要快捷键 Win + R 然后输入 grape 即可快速运行程序，美滋滋
 
-#### 使用说明
+<div align="center">
+<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape07.png" alt="权限管理模块说明"/>
+</div>
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+注：不想编译源码的小伙伴，我直接提供了编译好的 jar 包，在文件夹jar中，直接运行 java -jar XXX.jar即可
 
-#### 参与贡献
+## 命令讲解
+单词的查询提供了几个小命令，这里简单讲解一下（只支持单命令或无命令使用）
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+* -c   清空
+        
+* -q   退出
+        
+* -h   帮助
+<div align="center">
+<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape01.png" alt="权限管理模块说明"/>
+</div>
 
+* 无命令查询，默认在所有地方查询
+<div align="center">
+<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape02.png" alt="权限管理模块说明"/>
+</div>
 
-#### 码云特技
+* -a   与该字符串全匹配的单词
+<div align="center">
+<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape03.png" alt="权限管理模块说明"/>
+</div>
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+* -s   以字符串开始的单词
+<div align="center">
+<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape04.png" alt="权限管理模块说明"/>
+</div>
+
+* -e   以字符串结尾的单词
+<div align="center">
+<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape05.png" alt="权限管理模块说明"/>
+</div>
+
+* -p   在单词解释中搜索该字符串
+<div align="center">
+<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape06.png" alt="权限管理模块说明"/>
+</div>
+
+## 结尾
+
+可fork本仓库参与贡献
+有啥问题可在评论区留言，我努力回复，努力帮忙！
+多多fork多多start!!!😁
+
+## 捐赠
+
+可以请作者喝一瓶哇哈哈：
+
+<div align="center">
+<img src="https://gitee.com/qiu-qian/sky/raw/master/img/pay.png"  width="200px" height="200px" />
+</div>
