@@ -26,7 +26,7 @@ public class Main {
             AnsiConsole.systemInstall();
             System.out.println();
             System.out.println("\u001B[0m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            System.out.print("输入单词信息: ");
+            System.out.print("Grape_> ");
             input = scanner.nextLine();
             System.out.println();
             if (input == null || "".equalsIgnoreCase(input)) {
