@@ -71,7 +71,7 @@ java -jar D:\code\java\Grape\jar\dictionary-1.0.0-SNAPSHOT-jar-with-dependencies
 
 可fork本仓库参与贡献
 有啥问题可在评论区留言，我努力回复，努力帮忙！
-多多fork多多start多多支持!!!😁
+多多fork多多star多多支持!!!😁
 
 ## 捐赠
 
