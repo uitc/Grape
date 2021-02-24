@@ -16,11 +16,15 @@
 
 在Windows环境下，克隆项目代码，命令行进入根目录，运行 `start.bat` 文件即可。
 
-在 C:\system 下新建一个批处理文件 ge.bat，输入(注意填写你自己的jar路径)
+为了使用的方便，我们可以将其加入运行栏里，将 `jar` 文件拷贝到 `C:\Windows` 下，并新建一个批处理文件 `ge.bat` 内容如下：
 ```shell
-java -jar D:\code\java\Grape\jar\grape-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar C:\Windows\grape-1.0.0-SNAPSHOT-jar-with-dependencies.jar
 ```
-保存退出，然后下次使用，只需要快捷键 `Win + R` 然后输入 `ge` 即可快速运行程序，美滋滋
+<div align="center">
+<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape08.png" alt="权限管理模块说明"/>
+</div>
+
+下次使用时，只需要快捷键 `Win + R` 然后输入 `ge` 即可快速运行程序，美滋滋
 
 <div align="center">
 <img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape07.png" alt="权限管理模块说明"/>
