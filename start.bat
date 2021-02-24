@@ -1,1 +1,1 @@
-mvn clean package && java -jar target/dictionary-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+mvn clean package -Dmaven.test.skip=true&& java -jar target/grape-1.0.0-SNAPSHOT-jar-with-dependencies.jar

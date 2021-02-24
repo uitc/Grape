@@ -22,10 +22,8 @@
             <transactionManager type="JDBC"/>
             <!-- dataSource指数据源配置，POOLED是JDBC连接对象的数据源连接池的实现。 -->
             <dataSource type="POOLED">
-                <property name="driver" value="${driver}"/>
-                <property name="url" value="${url}"/>
-                <property name="username" value="${jdbc.username}"/>
-                <property name="password" value="${jdbc.password}"/>
+                <property name="url" value="${sqlServer.url}"/>
+                <property name="driver" value="${sqlServer.driverClassName}"/>
             </dataSource>
         </environment>
     </environments>

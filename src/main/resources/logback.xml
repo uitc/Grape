@@ -33,7 +33,7 @@
     <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 过滤器，只记录ERROR级别的日志 -->
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>ERROR</level>
+            <level>DEBUG</level>
             <onMatch>ACCEPT</onMatch>       <!--如果是匹配，就接受这条规则【整个appender块】，FilterReply类（DENY，NEUTRAL，ACCEPT）-->
             <onMismatch>DENY</onMismatch>   <!--如果没有匹配，就禁止-->
             <!--<onMismatch>NEUTRAL</onMismatch>-->     <!--如果没有匹配，就忽略这条规则，看下一个【appender块规则是否接受】-->
@@ -55,7 +55,7 @@
     <!--配置文件输出：info-->
     <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>INFO</level>
+            <level>DEBUG</level>
             <onMatch>ACCEPT</onMatch>
             <onMismatch>DENY</onMismatch>
         </filter>

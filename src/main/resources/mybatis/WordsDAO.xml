@@ -6,11 +6,14 @@
         <result column="word_explain" jdbcType="VARCHAR" property="wordExplain"/>
     </resultMap>
     <sql id="table_name">
-		words
-	</sql>
+        words
+    </sql>
     <sql id="Base_Column_List">
-		words.word, words.word_explain
-	</sql>
+        words
+        .
+        word
+        , words.word_explain
+    </sql>
     <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.swing.domain.WordsDO"
             useGeneratedKeys="true">
         insert into
@@ -39,7 +42,7 @@
         from
         <include refid="table_name"/>
         where
-        word like concat("%",#{word,jdbcType=VARCHAR},"%")
+        word like '%'||#{word,jdbcType=VARCHAR}||'%'
     </select>
 
     <select id="listByWordAll" parameterType="com.swing.domain.WordsDO" resultMap="BaseResultMap">
@@ -57,7 +60,7 @@
         from
         <include refid="table_name"/>
         where
-        word like concat(#{word,jdbcType=VARCHAR},"%")
+        word like #{word,jdbcType=VARCHAR}||'%'
     </select>
 
     <select id="listByWordEnd" parameterType="com.swing.domain.WordsDO" resultMap="BaseResultMap">
@@ -66,7 +69,7 @@
         from
         <include refid="table_name"/>
         where
-        word like concat("%",#{word,jdbcType=VARCHAR})
+        word like '%'||#{word,jdbcType=VARCHAR}
     </select>
 
     <select id="listByExplain" parameterType="com.swing.domain.WordsDO" resultMap="BaseResultMap">
@@ -75,7 +78,7 @@
         from
         <include refid="table_name"/>
         where
-        word_explain like concat("%",#{wordExplain,jdbcType=VARCHAR},"%")
+        word_explain like '%'||#{wordExplain,jdbcType=VARCHAR}||'%'
     </select>
 
 
