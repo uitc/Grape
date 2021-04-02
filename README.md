@@ -21,13 +21,13 @@
 java -jar C:\Windows\grape-1.0.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 <div align="center">
-<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape08.png" alt="权限管理模块说明"/>
+<img src="img/grape08.png" alt="权限管理模块说明"/>
 </div>
 
 下次使用时，只需要快捷键 `Win + R` 然后输入 `ge` 即可快速运行程序，美滋滋
 
 <div align="center">
-<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape07.png" alt="权限管理模块说明"/>
+<img src="img/grape07.png" alt="权限管理模块说明"/>
 </div>
 
 注：不想编译源码的小伙伴，我直接提供了编译好的 jar 包，在文件夹jar中，直接运行 java -jar XXX.jar即可
@@ -41,32 +41,32 @@ java -jar C:\Windows\grape-1.0.0-SNAPSHOT-jar-with-dependencies.jar
         
 * -h   帮助
 <div align="center">
-<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape01.png" alt="权限管理模块说明"/>
+<img src="img/grape01.png" alt="权限管理模块说明"/>
 </div>
 
 * 无命令查询，默认在所有地方查询
 <div align="center">
-<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape02.png" alt="权限管理模块说明"/>
+<img src="img/grape02.png" alt="权限管理模块说明"/>
 </div>
 
 * -a   与该字符串全匹配的单词
 <div align="center">
-<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape03.png" alt="权限管理模块说明"/>
+<img src="img/grape03.png" alt="权限管理模块说明"/>
 </div>
 
 * -s   以字符串开始的单词
 <div align="center">
-<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape04.png" alt="权限管理模块说明"/>
+<img src="img/grape04.png" alt="权限管理模块说明"/>
 </div>
 
 * -e   以字符串结尾的单词
 <div align="center">
-<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape05.png" alt="权限管理模块说明"/>
+<img src="img/grape05.png" alt="权限管理模块说明"/>
 </div>
 
 * -p   在单词解释中搜索该字符串
 <div align="center">
-<img src="https://gitee.com/qiu-qian/Grape/raw/master/img/grape06.png" alt="权限管理模块说明"/>
+<img src="img/grape06.png" alt="权限管理模块说明"/>
 </div>
 
 ## 结尾
